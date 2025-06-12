@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Introduction to Web Development</title>
+  <title>Quiz Example</title>
   <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
@@ -14,10 +14,63 @@
     </nav>
   </header>
   <main>
-    <article>
-      <h2>Introduction to Web Development</h2>
-      <p>This is your blog content...</p>
-    </article>
+    <h2>Quiz: Basic Web Knowledge</h2>
+
+    <div class="question">
+      <p><strong>1. What does HTML stand for?</strong></p>
+      <div class="options">
+        <label><input type="radio" name="q1" value="a" /> a) Hyper Tool Markup Language</label>
+        <label><input type="radio" name="q1" value="b" /> b) Hyperlinks and Text Markup Language</label>
+        <label><input type="radio" name="q1" value="c" /> c) Hyper Text Markup Language</label>
+        <label><input type="radio" name="q1" value="d" /> d) Home Tool Markup Language</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <p><strong>2. Which tag is used to create a hyperlink in HTML?</strong></p>
+      <div class="options">
+        <label><input type="radio" name="q2" value="a" /> a) &lt;link&gt;</label>
+        <label><input type="radio" name="q2" value="b" /> b) &lt;href&gt;</label>
+        <label><input type="radio" name="q2" value="c" /> c) &lt;a&gt;</label>
+        <label><input type="radio" name="q2" value="d" /> d) &lt;hyper&gt;</label>
+      </div>
+    </div>
+
+    <button onclick="checkAnswers()">Submit Answers</button>
+    <p id="score"></p>
   </main>
+
+  <script>
+    function checkAnswers() {
+      const answers = {
+        q1: 'c',
+        q2: 'c'
+      };
+
+      let score = 0;
+      let total = Object.keys(answers).length;
+
+      for (let q in answers) {
+        const selected = document.querySelector(input[name="${q}"]:checked);
+        const labels = document.querySelectorAll(input[name="${q}"] ~ label, input[name="${q}"]);
+        
+        document.querySelectorAll(input[name="${q}"]).forEach(input => {
+          input.parentElement.classList.remove("correct", "wrong");
+        });
+
+        if (selected) {
+          if (selected.value === answers[q]) {
+            selected.parentElement.classList.add("correct");
+            score++;
+          } else {
+            selected.parentElement.classList.add("wrong");
+            document.querySelector(input[name="${q}"][value="${answers[q]}"]).parentElement.classList.add("correct");
+          }
+        }
+      }
+
+      document.getElementById("score").innerText = You scored ${score} out of ${total};
+    }
+  </script>
 </body>
 </html>
