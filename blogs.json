@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Introduction to Web Development",
+    "link": "blogs/intro-to-web.html"
+  },
+  {
+    "title": "Understanding JavaScript",
+    "link": "blogs/javascript-basics.html"
+  },
+  {
+    "title": "CSS for Beginners",
+    "link": "blogs/css-for-beginners.html"
+  }
+]
