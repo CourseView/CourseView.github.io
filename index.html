@@ -1,11 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>CourseView Blog</title>
+  <meta charset="UTF-8">
+  <title>Welcome to Course View!</title>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <h1>Welcome to CourseView!</h1>
-  <p><a href="/blog/">Visit the Blog</a></p>
-  <p><a href="/support/">Support Me</a></p>
+
+  <header>
+    <h1>Welcome to Course View!</h1>
+    <nav>
+      <a href="/blog/">Blogs</a>
+      <a href="/support/">Support Me</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="blogs">
+      <h2>Blogs</h2>
+      <div class="blog-grid">
+        <a href="blog/blog1.html" class="blog-card">
+          <img src="assets/images/blog1-thumb.jpg" alt="Blog 1">
+          <h3>Arrays in Python</h3>
+        </a>
+        <a href="blog/blog2.html" class="blog-card">
+          <img src="assets/images/blog2-thumb.jpg" alt="Blog 2">
+          <h3>Binary Search Trees</h3>
+        </a>
+        <!-- Add more blog cards here -->
+      </div>
+    </section>
+  </main>
+
 </body>
 </html>
