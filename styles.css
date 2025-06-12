@@ -39,3 +39,22 @@ main {
 #blog-list a:hover {
   background: #ddd;
 }
+
+.question {
+  margin: 1.5em 0;
+}
+
+.options label {
+  display: block;
+  margin: 0.5em 0;
+  cursor: pointer;
+}
+
+.correct {
+  color: green;
+  font-weight: bold;
+}
+
+.wrong {
+  color: red;
+}
